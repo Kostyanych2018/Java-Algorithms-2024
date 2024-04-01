@@ -1,7 +1,4 @@
-import java.util.logging.Logger;
-
 public class Main {
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5 };
 
@@ -12,10 +9,9 @@ public class Main {
             arr[i] = arr[len - i - 1];
             arr[len - i - 1] = temp;
         }
-        StringBuilder sb = new StringBuilder("Инвертированный массив:");
+        System.out.print("Инвертированный массив:");
         for (int x : arr) {
-            sb.append(x).append(" ");
+            System.out.print(x + " ");
         }
-        LOGGER.info(sb.toString());
     }
 }
