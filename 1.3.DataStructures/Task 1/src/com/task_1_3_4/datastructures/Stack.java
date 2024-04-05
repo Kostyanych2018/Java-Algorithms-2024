@@ -41,10 +41,10 @@ public class Stack<T> implements Iterable<T> {
     }
 
     public Iterator<T> iterator() {
-        return new ListIterator();
+        return new StackListIterator();
     }
 
-    private class ListIterator implements Iterator<T> {
+    private class StackListIterator implements Iterator<T> {
 
         private Node curr = first;
 

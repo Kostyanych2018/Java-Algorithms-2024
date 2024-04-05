@@ -48,10 +48,10 @@ public class Queue<T> implements Iterable<T> {
     }
 
     public Iterator<T> iterator() {
-        return new ListIterator();
+        return new QueueListIterator();
     }
 
-    private class ListIterator implements Iterator<T> {
+    private class QueueListIterator implements Iterator<T> {
 
         private Node current = last.next;
 
