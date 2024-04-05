@@ -3,7 +3,7 @@ import com.examples.datastructures.*;
 import java.util.logging.Logger;
 
 public class Main {
-    private static final Logger l= Logger.getLogger(Main.class.getName());
+    private static final Logger l = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
         RingBuffer<Integer> buffer = new RingBuffer<>(5);
@@ -13,15 +13,10 @@ public class Main {
         buffer.enqueue(4);
         buffer.enqueue(5);
         l.info("Буфер полон: " + buffer.isFull());
-        //buffer.enqueue(6);
-
-        int item = buffer.dequeue();
-        int item1 = buffer.dequeue();
-        int item2 = buffer.dequeue();
 
         l.info("Буфер пуст: " + buffer.isEmpty());
-        
-        l.info(String.format("Удаленные элементы: %d,%d,%d", item, item1, item2));
+
+        l.info(String.format("Удаленные элементы: %d,%d,%d", buffer.dequeue(),buffer.dequeue(),buffer.dequeue()));
         l.info("Текущий размер буфера: " + buffer.size());
     }
 }
