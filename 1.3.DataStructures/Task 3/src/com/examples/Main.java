@@ -5,8 +5,8 @@ import java.util.logging.Logger;
 public class Main {
     private static final Logger l = Logger.getLogger(Main.class.getName());
 
-    public static void main() {
-        RingBuffer<Integer> buffer = new RingBuffer<>(5);
+    public static void main(String[]args) {
+        RingBuffer<Integer> buffer = RingBuffer.create(5);
         buffer.enqueue(1);
         buffer.enqueue(2);
         buffer.enqueue(3);
