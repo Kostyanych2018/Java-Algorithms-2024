@@ -21,16 +21,24 @@ package com.examples.datastructures;
 import java.util.NoSuchElementException;
 
 public class RingBuffer<T> {
+  
     private T[] buffer;
-
-    private int head = 0;// первый элемент
-    private int tail = 0;// последний элемент
-    private int size = 0;
+    private int head;
+    private int tail;
+    private int size;
 
     @SuppressWarnings("unchecked")
-    public RingBuffer(int n) {
-       buffer = (T[]) new Object[n];
+    private RingBuffer(int n) {
+        this.buffer = (T[]) new Object[n];
+        this.head = 0;
+        this.tail = 0;
+        this.size = 0;
     }
+
+    public static <T> RingBuffer<T> create(int n) {
+        return new RingBuffer<>(n);
+    }
+
 
     public boolean isEmpty() {
         return size == 0;
