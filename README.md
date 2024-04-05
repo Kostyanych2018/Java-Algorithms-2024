@@ -11,4 +11,7 @@
 - 5.2 Trie-деревья;
 - 5.3 Поиск подстрок;
 - 5.4 Регулярные выражения;
-
+***
+Just some Java practice
+***
+to see tasks go to ***Tasks branch***
