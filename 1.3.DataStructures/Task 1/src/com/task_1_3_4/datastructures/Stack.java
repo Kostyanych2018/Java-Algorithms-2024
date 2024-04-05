@@ -46,24 +46,18 @@ public class Stack<T> implements Iterable<T> {
 
     private class ListIterator implements Iterator<T> {
 
-        private Node current = first;
+        private Node curr = first;
 
         public boolean hasNext() {
-            return current != null;
+            return curr != null;
         }
 
         public T next() {
             if (!hasNext())
                 throw new NoSuchElementException();
-            T item = current.item;
-            current = current.next;
+            T item = curr.item;
+            current = curr.next;
             return item;
         }
-
-        @Override
-        public void remove() 
-		{
-			throw new UnsupportedOperationException();
-		}
     }
 }
