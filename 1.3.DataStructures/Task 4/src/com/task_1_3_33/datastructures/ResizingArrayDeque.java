@@ -95,11 +95,5 @@ public class ResizingArrayDeque<T> implements Iterable<T> {
             i++;
             return item;
         }
-
-        @Override
-        public void remove() 
-		{
-			throw new UnsupportedOperationException();
-		}
     }
 }

@@ -104,11 +104,5 @@ public class Deque<T> implements Iterable<T> {
             return item;
         }
 
-        
-        @Override
-        public void remove() 
-		{
-			throw new UnsupportedOperationException();
-		}
     }
 }
