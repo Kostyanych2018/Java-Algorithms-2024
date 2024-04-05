@@ -56,7 +56,7 @@ public class Stack<T> implements Iterable<T> {
             if (!hasNext())
                 throw new NoSuchElementException();
             T item = curr.item;
-            current = curr.next;
+            curr = curr.next;
             return item;
         }
     }
