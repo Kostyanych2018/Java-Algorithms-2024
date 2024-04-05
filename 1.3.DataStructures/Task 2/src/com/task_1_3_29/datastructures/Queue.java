@@ -66,10 +66,19 @@ public class Queue<T> implements Iterable<T> {
             current = current.next;
             return item;
         }
+<<<<<<< HEAD:1.3.DataStructures/Task 2/src/com/task_1_3_29/datastructures/Queue.java
 
         @Override
         public void remove() {
             throw new UnsupportedOperationException();
         }
+=======
+        
+        @Override
+        public void remove() 
+		{
+			throw new UnsupportedOperationException();
+		}
+>>>>>>> origin/Tasks:1.3.DataStructures/Task 2/src/com/examples/datastructures/Queue.java
     }
 }
