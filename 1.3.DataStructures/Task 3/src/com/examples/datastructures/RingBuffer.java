@@ -42,7 +42,7 @@ public class RingBuffer<T> {
 
     public void enqueue(T item) {
         if (isFull()) {
-            throw new RuntimeException("Переполенние буфера, ждем"
+            throw new IllegalArgumentException("Переполенние буфера, ждем"
                                         +" когда можно будет поместить данные");
         }
         buffer[tail] = item;
