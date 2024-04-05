@@ -2,7 +2,7 @@ package com.examples;
 import com.examples.datastructures.Queue;
 import java.util.logging.Logger;
 //1.3.29 стр.160
-public class Main {
+class Main {
     private static final Logger l = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
