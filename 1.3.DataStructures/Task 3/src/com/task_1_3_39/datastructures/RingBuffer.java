@@ -17,7 +17,7 @@ T dequeue() удаление элемента из начала буфера е�
 
 int size() текущий размер буфера
 */
-package com.examples.datastructures;
+package com.task_1_3_39.datastructures;
 import java.util.NoSuchElementException;
 
 public class RingBuffer<T> {
@@ -42,7 +42,7 @@ public class RingBuffer<T> {
 
     public void enqueue(T item) {
         if (isFull()) {
-            throw new RuntimeException("Переполенние буфера, ждем"
+            throw new IllegalArgumentException("Переполенние буфера, ждем"
                                         +" когда можно будет поместить данные");
         }
         buffer[tail] = item;

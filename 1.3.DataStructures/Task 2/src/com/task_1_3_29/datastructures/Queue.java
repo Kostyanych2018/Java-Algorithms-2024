@@ -1,25 +1,27 @@
 
-package com.examples.datastructures;
+package com.task_1_3_29.datastructures;
+
 import java.util.*;
+
 //1.3.29 стр.160
-public class Queue<Item> implements Iterable<Item> {
+public class Queue<T> implements Iterable<T> {
     private Node last;// ссылка на последний узел
-    private int N;
+    private int n;
 
     private class Node {
-        Item item;
+        T item;
         Node next;
     }
 
     public boolean isEmpty() {
-        return N == 0;
+        return n == 0;
     }
 
     public int size() {
-        return N;
+        return n;
     }
 
-    public void enqueue(Item item) {
+    public void enqueue(T item) {
         Node oldlast = last;
         last = new Node();
         last.item = item;
@@ -29,45 +31,45 @@ public class Queue<Item> implements Iterable<Item> {
             last.next = oldlast.next;
             oldlast.next = last;
         }
-        N++;
+        n++;
     }
 
-    public Item dequeue() {
+    public T dequeue() {
         if (isEmpty())
             throw new NoSuchElementException("Очередь пуста");
-        Item item = last.item;
+        T item = last.item;
         if (last.next == last) {
             last = null;
         } else {
             last.next = last.next.next;
         }
-        N--;
+        n--;
         return item;
     }
 
-    public Iterator<Item> iterator() {
+    public Iterator<T> iterator() {
         return new ListIterator();
     }
 
-    private class ListIterator implements Iterator<Item> {
+    private class ListIterator implements Iterator<T> {
 
         private Node current = last.next;
 
         public boolean hasNext() {
             return current != null;
-        };
+        }
 
-        public Item next() {
+        public T next() {
             if (!hasNext())
                 throw new NoSuchElementException();
-            Item item = current.item;
+            T item = current.item;
             current = current.next;
             return item;
         }
 
-        public void remove() 
-		{
-			throw new UnsupportedOperationException();
-		}
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
     }
 }

@@ -1,65 +1,66 @@
 
-package com.examples.datastructures;
+package com.task_1_3_4.datastructures;
 import java.util.*;
 //1.3.4 стр.157
-public class Stack<Item> implements Iterable<Item> {
+public class Stack<T> implements Iterable<T> {
     private Node first;// верхушка стека(последний добавленный узел)
-    private int N;
+    private int n;
 
     private class Node {
         // вложенный класс для определения узлов
-        Item item;
+        T item;
         Node next;
     }
 
     public boolean isEmpty() {
-        return first == null; // или N==0;
+        return first == null; 
     }
 
     public int size() {
-        return N;
+        return n;
     }
 
-    public void push(Item item) {
+    public void push(T item) {
         // добавление элемента на верхушку стека
         Node oldfirst = first;
         first = new Node();
         first.item = item;
         first.next = oldfirst;
-        N++;
+        n++;
     }
 
-    public Item pop() {
+    public T pop() {
         // удаление элемента с верхушки стека
         if (isEmpty()) {
             throw new NoSuchElementException("Стек пуст");
         }
-        Item item = first.item;
+        T item = first.item;
         first = first.next;
-        N--;
+        n--;
         return item;
     }
 
-    public Iterator<Item> iterator() {
+    public Iterator<T> iterator() {
         return new ListIterator();
     }
 
-    private class ListIterator implements Iterator<Item> {
+    private class ListIterator implements Iterator<T> {
 
         private Node current = first;
 
         public boolean hasNext() {
             return current != null;
-        };
+        }
 
-        public Item next() {
+        public T next() {
             if (!hasNext())
                 throw new NoSuchElementException();
-            Item item = current.item;
+            T item = current.item;
             current = current.next;
             return item;
         }
 
+        @Override
         public void remove() 
 		{
 			throw new UnsupportedOperationException();

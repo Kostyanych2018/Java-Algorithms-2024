@@ -1,4 +1,4 @@
-package com.examples.datastructures;
+package com.task_1_3_33.datastructures;
 import java.util.*;
 
 public class Deque<T> implements Iterable<T> {

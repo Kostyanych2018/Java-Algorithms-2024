@@ -1,6 +1,7 @@
-package com.examples;
-import com.examples.datastructures.*;
+package com.task_1_3_33;
 import java.util.logging.Logger;
+
+import com.task_1_3_33.datastructures.*;
 
 public class Main {
     // 1.3.33 стр.161
