@@ -25,6 +25,7 @@ public class Main {
             l.info("Буфер пуст: " + buffer.isEmpty());
 
             l.info(String.format("Удаленные элементы: %d,%d,%d", item, item1, item2));
+            
             l.info("Текущий размер буфера: " + buffer.size());
         }
     }
