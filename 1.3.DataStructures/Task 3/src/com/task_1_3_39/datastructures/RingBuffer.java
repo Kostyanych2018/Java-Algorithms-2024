@@ -35,11 +35,6 @@ public class RingBuffer<T> {
         this.size = 0;
     }
 
-    public static <T> RingBuffer<T> create(int n) {
-        return new RingBuffer<>(n);
-    }
-
-
     public boolean isEmpty() {
         return size == 0;
     }
@@ -75,6 +70,7 @@ public class RingBuffer<T> {
         }
         return item;
     }
+
     public int size(){
         return size;
     }
