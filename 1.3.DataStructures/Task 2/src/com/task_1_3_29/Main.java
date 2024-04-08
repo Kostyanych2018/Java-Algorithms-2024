@@ -9,11 +9,13 @@ public class Main {
     private static final Logger l = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
+        
         Queue<Integer> q = new Queue<>();
 
         q.enqueue(1);
         q.enqueue(2);
         q.enqueue(3);
+        
         if (l.isLoggable(java.util.logging.Level.INFO)) {
             l.info("Текущий размер очереди: " + q.size());
 
