@@ -7,7 +7,7 @@ class RingBuffer<T>
 
 RingBuffer(int cap) создание буфера
 
-boolaen is Empty() пуст ли буфер
+boolean is Empty() пуст ли буфер
 
 boolean isFull() полон ли буфер
 
