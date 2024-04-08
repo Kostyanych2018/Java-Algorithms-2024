@@ -17,7 +17,6 @@ public class Main {
             String input2 = "[(])";
             boolean isBalanced2 = Parentheses.isBalanced(input2, stack);
             l.info(String.format("%s is Balanced? %s", input2, isBalanced2));
-
         }
     }
 
