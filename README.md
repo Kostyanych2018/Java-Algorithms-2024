@@ -1,4 +1,4 @@
-![image](https://github.com/Kostyanych2018/Java-Algorithms-2024/assets/147883038/f816c864-f6b9-45df-a25a-390d1b90d31f)# Java-Algorithms-2024
+# Java-Algorithms-2024
 ***
 # SonarCloud : [Go to SonarCloud](https://sonarcloud.io/project/configuration/GitHubActions?id=Kostyanych2018_Java-Algorithms-2024)
 ***
