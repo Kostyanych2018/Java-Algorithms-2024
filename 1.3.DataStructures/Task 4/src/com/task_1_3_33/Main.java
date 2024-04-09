@@ -1,55 +1,105 @@
 package com.task_1_3_33;
-import java.util.logging.Logger;
 
+import java.util.Scanner;
 import com.task_1_3_33.datastructures.*;
 
 public class Main {
-    // 1.3.33 стр.161
-    private static final Logger l = Logger.getLogger(Main.class.getName());
-    public static void main(String[] args) {
-        
-        ResizingArrayDeque<Integer> deque1 = new ResizingArrayDeque<>();
-        deque1.pushLeft(1);
-        deque1.pushRight(2);
-        deque1.pushLeft(3);
-        deque1.pushRight(4);
+    public static <T> void main(String[] args) {
+        Deque<T> deque = new Deque<>();
+        //можно через ResizingArrayDeque
+        Scanner scanner = new Scanner(System.in);
+        String continueProgram = "да";
 
-        StringBuilder sb = new StringBuilder();
-        for (int i : deque1) {
-            sb.append(i).append(" ");
+        while (continueProgram.equalsIgnoreCase("да")) {
+            System.out.println("Выберите операцию:");
+            System.out.println("1. Добавить элемент слева");
+            System.out.println("2. Добавить элемент справа");
+            System.out.println("3. Удалить элемент слева");
+            System.out.println("4. Удалить элемент справа");
+            System.out.println("5. Показать размер дека");
+            System.out.println("6. Пуст ли дек?");
+            System.out.println("7. Вывести все элементы дека");
+            System.out.println("8. Выход");
+            int operation = scanner.nextInt();
+
+            switch (operation) {
+                case 1:
+                    addElementLeft(deque, scanner);
+                    break;
+                case 2:
+                    addElementRight(deque, scanner);
+                    break;
+                case 3:
+                    removeElementLeft(deque);
+                    break;
+                case 4:
+                    removeElementRight(deque);
+                    break;
+                case 5:
+                    printDequeSize(deque);
+                    break;
+                case 6:
+                    checkIfDequeIsEmpty(deque);
+                    break;
+                case 7:
+                    printDequeElements(deque);
+                    break;
+                case 8:
+                    continueProgram = "нет";
+                    break;
+                default:
+                    System.out.println("Некорректный выбор операции.");
+            }
         }
-        if(l.isLoggable(java.util.logging.Level.INFO)){
-            l.info(sb.toString());
+        scanner.close();
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T> void addElementLeft(Deque<T> deque, Scanner scanner) {
+        System.out.println("Введите значение:");
+        T value = (T) scanner.next();
+        deque.pushLeft(value);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T> void addElementRight(Deque<T> deque, Scanner scanner) {
+        System.out.println("Введите значение:");
+        T value = (T) scanner.next();
+        deque.pushRight(value);
+    }
+
+    private static <T> void removeElementLeft(Deque<T> deque) {
+        if (!deque.isEmpty()) {
+            System.out.println("Удаленный элемент: " + deque.popLeft());
+        } else {
+            System.out.println("Дек пуст.");
         }
+    }
 
-        int left = deque1.popLeft();
-        int right = deque1.popRight();
-
-        if(l.isLoggable(java.util.logging.Level.INFO)){
-            l.info(left + " " + right);
+    private static <T> void removeElementRight(Deque<T> deque) {
+        if (!deque.isEmpty()) {
+            System.out.println("Удаленный элемент: " + deque.popRight());
+        } else {
+            System.out.println("Дек пуст.");
         }
+    }
 
-        sb = new StringBuilder();
-        for (int i : deque1) {
-            sb.append(i).append(" ");
-        }
-        if(l.isLoggable(java.util.logging.Level.INFO)){
-            l.info(sb.toString());
-        }
+    private static <T> void printDequeSize(Deque<T> deque) {
+        System.out.println("Размер дека: " + deque.size());
+    }
 
-        Deque<Integer> deque2 = new Deque<>();
+    private static <T> void checkIfDequeIsEmpty(Deque<T> deque) {
+        System.out.println("Дек пуст? " + deque.isEmpty());
+    }
 
-        deque2.pushLeft(1);
-        deque2.pushRight(2);
-        deque2.pushLeft(3);
-        deque2.pushRight(4);
-
-        sb = new StringBuilder();
-        for (int i : deque2) {
-            sb.append(i).append(" ");
-        }
-        if(l.isLoggable(java.util.logging.Level.INFO)){
-            l.info(sb.toString());
+    private static <T> void printDequeElements(Deque<T> deque) {
+        System.out.println("Элементы дека:");
+        if (!deque.isEmpty()) {
+            for (T element : deque) {
+                System.out.println(element);
+            }
+        } else {
+            System.out.println("Дек пуст");
         }
     }
 }

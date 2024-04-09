@@ -1,23 +1,49 @@
 package com.task_1_3_4;
 
-import java.util.logging.Logger;
-
 import com.task_1_3_4.datastructures.*;
 
-public class Main {
-    private static final Logger l = Logger.getLogger(Main.class.getName());
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
-    // 1.3.4 стр.157
+public class Main {
     public static void main(String[] args) {
         Stack<Character> stack = new Stack<>();
-        if (l.isLoggable(java.util.logging.Level.INFO)) {
-            String input1 = "{[()]}";
-            boolean isBalanced1 = Parentheses.isBalanced(input1, stack);
-            l.info(String.format("%s is Balanced? %s", input1, isBalanced1));
-            String input2 = "[(])";
-            boolean isBalanced2 = Parentheses.isBalanced(input2, stack);
-            l.info(String.format("%s is Balanced? %s", input2, isBalanced2));
+        Scanner scanner = new Scanner(System.in);
+
+        int choice = 0;
+        while (choice != 3) {
+            System.out.println("1. Check balanced parentheses");
+            System.out.println("2. Exit");
+            System.out.print("Enter your choice: ");
+            try {
+                choice = scanner.nextInt();
+                scanner.nextLine();
+                switch (choice) {
+                    case 1:
+                        System.out.print("Enter a string to check balanced parentheses: ");
+
+                        String input = scanner.nextLine();
+                        if (input.isEmpty()) {
+                            System.out.println("Input is empty!");
+                        } else {
+                            boolean isBalanced = Parentheses.isBalanced(input, stack);
+                            System.out.println("Input: " + input);
+                            System.out.println("Is Balanced? " + isBalanced);
+                        }
+                        break;
+                    case 2:
+                        System.out.println("Exiting...");
+                        return;
+                    default:
+                        System.out.println("Invalid choice! Please try again.");
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input! Please enter a valid choice.");
+                scanner.nextLine();
+            }
         }
+        scanner.close();
     }
 
 }

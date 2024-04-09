@@ -52,19 +52,20 @@ public class Queue<T> implements Iterable<T> {
     }
 
     private class QueueListIterator implements Iterator<T> {
-
         private Node current = last.next;
-
+        private int count = 0;
+    
         public boolean hasNext() {
-            return current != null;
+            return count < n;
         }
-
+    
         public T next() {
             if (!hasNext())
                 throw new NoSuchElementException();
             T item = current.item;
             current = current.next;
+            count++;
             return item;
         }
-    }
+    }    
 }
