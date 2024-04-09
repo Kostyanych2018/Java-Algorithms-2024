@@ -2,7 +2,7 @@
 ***
 # SonarCloud : [Go to SonarCloud](https://sonarcloud.io/project/configuration/GitHubActions?id=Kostyanych2018_Java-Algorithms-2024)
 ***
-- 1.3 Контейнеры, очереди, стеки; [1.3 Контейнеры, очереди, стеки](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/1.3.DataStructures)
+- [1.3 Контейнеры, очереди, стеки;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/1.3.DataStructures)
 - 2.5 Применение сортировок;
 - 3.2 Деревья бинарного поиска;
 - 3.3 Сбалансированные деревья поиска;
