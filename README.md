@@ -1,6 +1,7 @@
 # Java-Algorithms-2024
 ***
 # SonarCloud : [Go to SonarCloud](https://sonarcloud.io/project/configuration/GitHubActions?id=Kostyanych2018_Java-Algorithms-2024)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Kostyanych2018_Java-Algorithms-2024&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Kostyanych2018_Java-Algorithms-2024)
 ***
 - [1.3 Контейнеры, очереди, стеки;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/1.3.DataStructures)
 - [2.5 Применение сортировок;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/2.5.ApplicationOfSorts)
