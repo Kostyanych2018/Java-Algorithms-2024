@@ -1,4 +1,7 @@
-package com.task_3_3_29;
+package com.task_3_3_31.datastructures;
+import javax.swing.*;
+import java.awt.Graphics;
+import java.awt.Color;
 
 public class RedBlackBST<K extends Comparable<K>, V> {
     private Node root;
@@ -20,6 +23,54 @@ public class RedBlackBST<K extends Comparable<K>, V> {
             this.value = value;
             this.n = n;
             this.color = color;
+        }
+    }
+
+    public void draw() {
+        JFrame frame = new JFrame("Red Black Tree");
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.add(new TreePanel(root));
+        frame.setVisible(true);
+    }
+
+    class TreePanel extends JPanel {
+        Node root;
+
+        TreePanel(Node root) {
+            this.root = root;
+        }
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            drawTree(g, getWidth() / 2, 40, root);
+        }
+
+        private void drawTree(Graphics g, int x, int y, Node node) {
+            if (node == null) return;
+
+            if (node.color == RED) {
+                g.setColor(Color.RED);
+            } else {
+                g.setColor(Color.BLACK);
+            }
+
+            g.fillOval(x, y, 30, 30);
+            g.setColor(Color.WHITE);
+            g.drawString(node.key.toString(), x + 10, y + 20);
+
+            if (node.left != null) {
+                g.setColor(Color.BLACK);
+                g.drawLine(x + 15, y + 30, x - 30, y + 60);
+                drawTree(g, x - 50, y + 60, node.left);
+            }
+
+            if (node.right != null) {
+                g.setColor(Color.BLACK);
+                g.drawLine(x + 15, y + 30, x + 70, y + 60);
+                drawTree(g, x + 50, y + 60, node.right);
+            }
         }
     }
 
