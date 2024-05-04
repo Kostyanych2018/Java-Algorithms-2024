@@ -25,8 +25,8 @@ _Хеш-атака_. Найдите $2^N$ строк, каждая длиной 
 ```
 public int hashCode(){
     int hash = 0;
-    for(int i=0;i<length();i++){
-        hash=(hash*31)+charAt(i);
+    for(int i=0;i < length();i++){
+        hash = (hash*31)+charAt(i);
         return hash;
     }
 }
