@@ -3,6 +3,6 @@
  - Task 1: Plan - ; Fact - .
  - Task 2: Plan - ; Fact - .
  - Task 3: Plan - ; Fact - .
- - Task 4: Plan - 1; Fact - .
+ - Task 4: Plan - ; Fact - .
  
 Условия заданий:
