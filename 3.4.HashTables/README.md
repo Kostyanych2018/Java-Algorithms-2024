@@ -15,7 +15,7 @@
 # Task 2:
 3.4.19
 
-Реализуйте метод _keys()_ для классов _SeparateChainingHashST_ и_LinearProbingHashST_.
+Реализуйте метод _keys()_ для классов _SeparateChainingHashST_ и _LinearProbingHashST_.
 
 # Task 3:
 3.4.32
