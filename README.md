@@ -7,7 +7,7 @@
 - [2.5 Применение сортировок;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/2.5.ApplicationOfSorts)
 - [3.2 Деревья бинарного поиска;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/3.2.BinarySearchTrees)
 - [3.3 Сбалансированные деревья поиска;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/3.3.BalancedSearchTrees)
-- 3.4 Хеш-таблицы;
+- [3.4 Хеш-таблицы;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/3.4.HashTables)
 - 5.1 Сортировка строк;
 - 5.2 Trie-деревья;
 - 5.3 Поиск подстрок;
