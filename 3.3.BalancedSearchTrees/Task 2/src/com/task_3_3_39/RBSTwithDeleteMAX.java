@@ -34,7 +34,6 @@ public class RBSTwithDeleteMAX<K extends Comparable<K>, V> {
         } else {
             return x.n;
         }
-
     }
 
     public boolean isEmpty() {

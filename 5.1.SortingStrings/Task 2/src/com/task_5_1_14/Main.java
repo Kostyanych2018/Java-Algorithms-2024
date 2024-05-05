@@ -14,7 +14,7 @@ public class Main {
         };
         
         ThreeWaySort.sort(arrays);
-        System.out.println("Отсортированный думерный массив: ");
+        System.out.println("Отсортированный двумерный массив: ");
         System.out.println(Arrays.deepToString(arrays));
 }
 }

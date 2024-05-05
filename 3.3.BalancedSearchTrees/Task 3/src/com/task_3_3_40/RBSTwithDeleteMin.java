@@ -1,4 +1,4 @@
-package com.task_3_3_39;
+package com.task_3_3_40;
 
 //в конце класса
 public class RBSTwithDeleteMin<K extends Comparable<K>, V> {
@@ -34,7 +34,6 @@ public class RBSTwithDeleteMin<K extends Comparable<K>, V> {
         } else {
             return x.n;
         }
-
     }
 
     public boolean isEmpty() {

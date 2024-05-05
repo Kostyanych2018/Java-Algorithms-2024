@@ -20,7 +20,7 @@ public class TST<V> {
     }
 
     private Node get(Node x, String key, int d) {
-        if (x == null || key == null || key.trim().isEmpty()) {
+        if (x == null || key == null || key.trim().isEmpty() || d >= key.length()) {
             return null;
         }
         char c = key.charAt(d);
@@ -39,6 +39,9 @@ public class TST<V> {
     }
 
     private Node put(Node x, String key, V val, int d) {
+        if (d >= key.length()) {
+            return x;
+        }
         char c = key.charAt(d);
         if (x == null) {
             x = new Node();

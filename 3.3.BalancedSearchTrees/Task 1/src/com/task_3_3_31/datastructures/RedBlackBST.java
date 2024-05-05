@@ -84,7 +84,6 @@ public class RedBlackBST<K extends Comparable<K>, V> {
         } else {
             return x.n;
         }
-
     }
 
     private boolean isRed(Node x) {
