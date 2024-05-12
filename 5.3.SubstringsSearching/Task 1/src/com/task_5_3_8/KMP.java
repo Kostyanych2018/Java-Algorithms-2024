@@ -34,22 +34,22 @@ public class KMP {
         }
     }
 
-    public int count(String s){
-        int count=0;
-        int pos=search(s, 0);
-        while(pos<s.length()){
+    public int count(String s) {
+        int count = 0;
+        int pos = search(s, 0);
+        while (pos < s.length()) {
             count++;
-            pos=search(s,pos+pat.length());
+            pos = search(s, pos + pat.length());
         }
         return count;
     }
 
-    public List<Integer> searchAll(String s){
-        List<Integer> count=new ArrayList<>();
-        int pos=search(s, 0);
-        while(pos<s.length()){
+    public List<Integer> searchAll(String s) {
+        List<Integer> count = new ArrayList<>();
+        int pos = search(s, 0);
+        while (pos < s.length()) {
             count.add(pos);
-            pos=search(s, pos+pat.length());
+            pos = search(s, pos + pat.length());
         }
         return count;
     }

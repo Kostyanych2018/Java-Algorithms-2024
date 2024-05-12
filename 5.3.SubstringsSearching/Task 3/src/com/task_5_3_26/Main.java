@@ -1,11 +1,11 @@
-package com.task_5_3_27;
+package com.task_5_3_26;
 
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        String s1=" ",s2=" ";
+        Scanner scanner = new Scanner(System.in);
+        String s1 = " ", s2 = " ";
 
         while (true) {
             System.out.println("Меню:");
@@ -47,15 +47,15 @@ public class Main {
         }
     }
 
-    public static boolean isCyclicPermutation(String s1,String s2){
-        if(s1.length()!=s2.length()){
+    public static boolean isCyclicPermutation(String s1, String s2) {
+        if (s1.length() != s2.length()) {
             return false;
         }
         return sortString(s1).equals(sortString(s2));
     }
 
-    public static String sortString(String s){
-        char[] chars=s.toCharArray();
+    public static String sortString(String s) {
+        char[] chars = s.toCharArray();
         java.util.Arrays.sort(chars);
         return new String(chars);
     }
