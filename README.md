@@ -6,11 +6,11 @@
 - [1.3 Контейнеры, очереди, стеки;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/1.3.DataStructures)
 - [2.5 Применение сортировок;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/2.5.ApplicationOfSorts)
 - [3.2 Деревья бинарного поиска;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/3.2.BinarySearchTrees)
-- 3.3 Сбалансированные деревья поиска;
-- 3.4 Хеш-таблицы;
-- 5.1 Сортировка строк;
-- 5.2 Trie-деревья;
-- 5.3 Поиск подстрок;
+- [3.3 Сбалансированные деревья поиска;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/3.3.BalancedSearchTrees)
+- [3.4 Хеш-таблицы;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/Tasks/3.4.HashTables)
+- [5.1 Сортировка строк;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/5.2/5.1.SortingStrings)
+- [5.2 Trie-деревья;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/5.2/5.2.TrieTrees)
+- [5.3 Поиск подстрок;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/5.3/5.3.SubstringsSearching)
 - 5.4 Регулярные выражения.
 ***
 Just some Java practice
