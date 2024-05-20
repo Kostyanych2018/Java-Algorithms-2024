@@ -11,7 +11,7 @@
 - [5.1 Сортировка строк;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/5.2/5.1.SortingStrings)
 - [5.2 Trie-деревья;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/5.2/5.2.TrieTrees)
 - [5.3 Поиск подстрок;](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/5.3/5.3.SubstringsSearching)
-- 5.4 Регулярные выражения.
+- [5.4 Регулярные выражения.](https://github.com/Kostyanych2018/Java-Algorithms-2024/tree/5.4/5.4.RegExprs)
 ***
 Just some Java practice
 ***
